@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catan's Portfolio ✦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Ricah<span> Catan's</span> Portfolio</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects-section">Projects</a></li>
+    <li><a href="#about-section">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="petals" id="petals"></div>
+  <div class="deco-circle deco-circle-1"></div>
+  <div class="deco-circle deco-circle-2"></div>
+  <div class="deco-circle deco-circle-3"></div>
+  <div class="hero-content">
+    <div style="text-align:center; font-size: 5rem; opacity: 0.6;">🎀🎀🎀</div>
+    
+    <h1 class="hero-name"><em>Ricah's</em><br>Portfolio</h1>
+    <p class="hero-subtitle">Web Systems</p>
+    <div class="hero-divider">
+      <span></span><i>✿</i><span></span>
+    </div>
+    <a href="#projects-section" class="btn-primary">View My Portfolio</a>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects-section">
+  <div class="projects-header reveal">
+    <p class="section-label">✦ My Projects</p>
+    <h2 class="section-title">Web <em>Systems</em></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <!--Project 01 -->
+    <div class="project-card featured reveal">
+      <div>
+        <div class="project-number">01</div>
+        <span class="project-tag">Laboratory 1</span>
+        <h3 class="project-title">HTML</h3>
+        <a href="https://lab1-three-zeta.vercel.app/" class="project-link">View Project →</a>
+        <br>
+        <button class="btn-details" onclick="openModal('modal-1')">✦ Project Details</button>
+      </div>
+      <div style="text-align:center; font-size: 5rem; opacity: 0.6;">🎀</div>
+    </div>
+
+    <!-- Project 02 -->
+    <div class="project-card reveal">
+      <div class="project-number">02</div>
+      <span class="project-tag">Laboratory 2</span>
+      <h3 class="project-title">HTML with different tags</h3>
+      <a href="https://2-tau-snowy.vercel.app/index.html" class="project-link">View Project →</a>
+      <br>
+      <button class="btn-details" onclick="openModal('modal-2')">✦ Project Details</button>
+
+    </div>
+
+    <!-- Project 03 -->
+    <div class="project-card reveal">
+      <div class="project-number">03</div>
+      <span class="project-tag">Laboratory 3</span>
+      <h3 class="project-title">Iframes and different tags</h3>
+      <a href="https://3-three-lovat.vercel.app/" class="project-link">View Project →</a>
+      <br>
+      <button class="btn-details" onclick="openModal('modal-3')">✦ Project Details</button>
+
+    </div>
+
+    <!-- Project 04 -->
+    <div class="project-card reveal">
+      <div class="project-number">04</div>
+      <span class="project-tag">Laboratory 4</span>
+      <h3 class="project-title">Portfolio</h3>
+      <a href="#" class="project-link">View Project →</a>
+      <br>
+      <button class="btn-details" onclick="openModal('modal-4')">✦ Project Details</button>
+     
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── MODAL 1 ── -->
+<div class="modal-overlay" id="modal-1" onclick="handleOverlayClick(event,'modal-1')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
+
+    <div class="modal-header">
+      <span class="modal-tag">Laboratory 1</span>
+      <h2 class="modal-title">Simple HTML</h2>
+      <p class="modal-subtitle">My very first structured web page using core HTML elements</p>
+    </div>
+
+    <div class="modal-body">
+
+      <!-- Screenshots -->
+      <p class="modal-video-label">Screenshots</p>
+      <div class="modal-gallery">
+        <div class="gallery-item">
+          <img src="lab1/1.JPG" alt="Screenshot 1" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab1/2.JPG" alt="Screenshot 2" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+      <!-- VIDEO -->
+      <div class="modal-video">
+        <p class="modal-video-label">Demo Video</p>
+        <div class="video-wrapper">
+          <video controls width="100%">
+            <source src="lab1/1.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+      <!-- PROJECT DETAILS -->
+      <div class="modal-details">
+        <div class="detail-block">
+          <div class="detail-label">Subject</div>
+          <div class="detail-value">Web Systems & Technologies</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Year / Semester</div>
+          <div class="detail-value">2nd Year — 2nd Semester</div>
+        </div>
+
+      </div>
+
+      <!-- DESCRIPTION -->
+      <h3 class="modal-desc-title">About this project</h3>
+      <p class="modal-desc-text">
+        This laboratory exercise introduced the foundational structure of an HTML document. The goal was to build a simple, well-formed web page using basic tags such as headings, paragraphs, links, and images — following proper HTML5 syntax and document structure.
+      </p>
+
+      <!-- TECHNOLOGIES USED -->
+      <h3 class="modal-desc-title">Technologies Used</h3>
+      <div class="modal-pills">
+        <span class="modal-pill">HTML5</span>
+        <span class="modal-pill">Notepad</span>
+        <span class="modal-pill">Github</span>
+        <span class="modal-pill">Vercel</span>
+      </div>
+
+      <a href="https://lab1-three-zeta.vercel.app/" class="modal-cta" target="_blank">
+        View Live Project →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL 2 ── -->
+<div class="modal-overlay" id="modal-2" onclick="handleOverlayClick(event,'modal-2')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
+
+    <div class="modal-header">
+      <span class="modal-tag">Laboratory 2</span>
+      <h2 class="modal-title">HTML with Different Tags</h2>
+      <p class="modal-subtitle">Exploring HTML's rich set of semantic and formatting tags</p>
+    </div>
+
+    <div class="modal-body">
+
+      <p class="modal-video-label">Screenshots</p>
+      <div class="modal-gallery">
+        <div class="gallery-item">
+          <img src="lab2/Home.JPG" alt="Screenshot 1" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab2/frame.JPG" alt="Screenshot 2" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab2/Basic.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab2/format1.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab2/format2.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+      <div class="modal-video">
+        <p class="modal-video-label">Demo Video</p>
+        <div class="video-wrapper">
+          <video controls width="100%">
+            <source src="lab2/2.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+      <div class="modal-details">
+        <div class="detail-block">
+          <div class="detail-label">Subject</div>
+          <div class="detail-value">Web Systems & Technologies</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Year / Semester</div>
+          <div class="detail-value">2nd Year — 2nd Semester</div>
+        </div>
+
+      </div>
+
+      <h3 class="modal-desc-title">About this project</h3>
+      <p class="modal-desc-text">
+        This lab expanded on the basics by using a wider variety of HTML tags — including lists, tables, forms, semantic tags like &lt;article&gt;, &lt;section&gt;, &lt;header&gt;, and inline formatting elements like &lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;, and more.
+      </p>
+
+      <h3 class="modal-desc-title">Technologies Used</h3>
+      <div class="modal-pills">
+        <span class="modal-pill">HTML5</span>
+        <span class="modal-pill">Notepad</span>
+        <span class="modal-pill">Github</span>
+        <span class="modal-pill">Vercel</span>
+      </div>
+
+      <a href="https://2-tau-snowy.vercel.app/index.html" class="modal-cta" target="_blank">
+        View Live Project →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL 3 ── -->
+<div class="modal-overlay" id="modal-3" onclick="handleOverlayClick(event,'modal-3')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-3')">✕</button>
+
+    <div class="modal-header">
+      <span class="modal-tag">Laboratory 3</span>
+      <h2 class="modal-title">Iframes & Different Tags</h2>
+      <p class="modal-subtitle">Embedding external content and mastering advanced HTML tags</p>
+    </div>
+
+    <div class="modal-body">
+
+      <p class="modal-video-label">Screenshots</p>
+      <div class="modal-gallery">
+        <div class="gallery-item">
+          <img src="lab3/1.JPG" alt="Screenshot 1" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab3/2.JPG" alt="Screenshot 2" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab3/3.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab3/4.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab3/5.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab3/6.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab3/7.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+      <div class="modal-video">
+        <p class="modal-video-label">Demo Video</p>
+        <div class="video-wrapper">
+          <video controls width="100%">
+            <source src="lab3/3.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+       <div class="modal-details">
+        <div class="detail-block">
+          <div class="detail-label">Subject</div>
+          <div class="detail-value">Web Systems & Technologies</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Year / Semester</div>
+          <div class="detail-value">2nd Year — 2nd Semester</div>
+        </div>
+
+      </div>
+
+      <h3 class="modal-desc-title">About this project</h3>
+      <p class="modal-desc-text">
+        This laboratory focused on embedding external pages and media using &lt;iframe&gt; tags, along with deeper exploration of miscellaneous HTML tags including &lt;details&gt;, &lt;summary&gt;, &lt;figure&gt;, &lt;figcaption&gt;, &lt;blockquote&gt;, and &lt;code&gt;.
+      </p>
+
+      <h3 class="modal-desc-title">Technologies Used</h3>
+      <div class="modal-pills">
+        <span class="modal-pill">HTML5</span>
+        <span class="modal-pill">Notepad</span>
+        <span class="modal-pill">Github</span>
+        <span class="modal-pill">Vercel</span>
+      </div>
+
+      <a href="https://3-three-lovat.vercel.app/" class="modal-cta" target="_blank">
+        View Live Project →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL 4 ── -->
+<div class="modal-overlay" id="modal-4" onclick="handleOverlayClick(event,'modal-4')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-4')">✕</button>
+
+    <div class="modal-header">
+      <span class="modal-tag">Laboratory 4</span>
+      <h2 class="modal-title">Portfolio</h2>
+      <p class="modal-subtitle">This project is all about building a Personal Portfolio</p>
+    </div>
+
+    <div class="modal-body">
+
+      <p class="modal-video-label">Screenshots</p>
+      <div class="modal-gallery">
+        <div class="gallery-item">
+          <img src="lab4/Home.JPG" alt="Screenshot 1" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab4/Projects.JPG" alt="Screenshot 2" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab4/Projectss.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab4/About.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="gallery-item">
+          <img src="lab4/Contact.JPG" alt="Screenshot 3" class="gallery-img" onclick="openLightbox(this.src, this.alt)">
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+      <div class="modal-video">
+        <p class="modal-video-label">Demo Video</p>
+        <div class="video-wrapper">
+          <video controls width="100%">
+            <source src="lab4/lab4.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="modal-section-sep"></div>
+
+       <div class="modal-details">
+        <div class="detail-block">
+          <div class="detail-label">Subject</div>
+          <div class="detail-value">Web Systems & Technologies</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Year / Semester</div>
+          <div class="detail-value">2nd Year — 2nd Semester</div>
+        </div>
+
+      </div>
+
+      <h3 class="modal-desc-title">About this project</h3>
+      <p class="modal-desc-text">
+        A Simple Portfolio that contains 4 navigations such as Home, Projects, About me, and Contacts. This portfolio serves as a compilation for all the Class Laboratories in Web Systems.
+      </p>
+
+      <h3 class="modal-desc-title">Technologies Used</h3>
+      <div class="modal-pills">
+        <span class="modal-pill">HTML5</span>
+        <span class="modal-pill">JavaScript</span>
+        <span class="modal-pill">VS Code</span>
+        <span class="modal-pill">Github</span>
+        <span class="modal-pill">Vercel</span>
+      </div>
+      <a href="" class="modal-cta" target="_blank">
+        View Live Project →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about-section">
+  <div id="about">
+    <div class="about-visual reveal">
+      <img src="me.jpg" alt="Profile photo" class="about-img-placeholder" style="object-fit: cover; border-radius: inherit; width: 100%; height: 100%;" />
+      <div class="about-badge">
+        <div class="about-badge-num">2nd Yr Student</div>
+        <div class="about-badge-label">Bachelor of Science In Computer Science</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p class="section-label">✦ About Myself</p>
+      <h2 class="section-title">Hello, I'm <em>Ricah</em></h2>
+      <div class="section-line"></div>
+      <p>I'm a 2nd Year BSCS Student, Currently Studying at North Eastern Mindanao State University (NEMSU-Lianga Campus)</p>
+      <p>I like doings things that makes my heart happy, I like doing tiktoks and wearing cute and sexy outfits.</p>
+      <p>When I'm not at school, you'll find me pressing flowers, curating playlists, or hunting for the perfect café.</p>
+      <div class="about-skills">
+        <span class="skill-pill">Model</span>
+        <span class="skill-pill">Dancer</span>
+        <span class="skill-pill">Tiktoker</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-label">✦ Get in touch with me</p>
+    <h2 class="section-title">DM for more<em> Info </em></h2>
+    <div class="section-line"></div>
+    <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.8;">Have an offer or questions in mind? I'd love to hear about it. Reach out through any of my channels — I typically respond within 24 hours.</p>
+    <div class="contact-links">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ricahcatan28@gmail.com" class="contact-link-item">
+        <div class="contact-link-icon">✉️</div>
+        <span class="contact-link-label">Gmail</span>
+      </a>
+      <a href="https://www.facebook.com/ricah.catan?" class="contact-link-item">
+        <div class="contact-link-icon">ⓕ</div>
+        <span class="contact-link-label">Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/kristaka_77" class="contact-link-item">
+        <div class="contact-link-icon">📷</div>
+        <span class="contact-link-label">Instagram</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Catan's Portfolio ✦ Designed with <span>♥</span></p>
+</footer>
+
+<!-- LIGHTBOX OVERLAY for full-screen image viewing -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+ <script src="script.js"></script>
+</body>
+</html>
